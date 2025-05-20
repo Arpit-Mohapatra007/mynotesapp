@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "613069796434",
+    "project_id": "mynotes-dreadx",
+    "storage_bucket": "mynotes-dreadx.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613069796434:android:fdfd5cbd6dca689b09db8b",
+        "android_client_info": {
+          "package_name": "com.example.mynotes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD7H3YGuH8hj3FA42RK1MleWzIos-3F08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
