@@ -6,7 +6,7 @@ import 'package:mynotes/views/login_view.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
-      title: 'Flutter-Demo',
+      title: 'Flutter Demo',
       theme: ThemeData(
       
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 4, 0)),
