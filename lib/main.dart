@@ -9,7 +9,7 @@ import 'package:mynotes/views/verify_email.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
-      title: 'Flutter-Demo',
+      title: 'My Notes',
       theme: ThemeData(
       
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 4, 0)),
@@ -19,6 +19,7 @@ void main() {
         loginRoute:(context)=> const LoginView(),
         registerRoute:(context)=> const RegisterView(),
         notesRoute:(context)=>const NotesView(),
+        verifyEmailRoute:(context)=>const VerifyEmailView(),
       },
     ),);
 }
@@ -129,3 +130,4 @@ Future<bool> showLogOutDialog(BuildContext context){
       (value) => value??false
       );
 }
+
