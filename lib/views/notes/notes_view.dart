@@ -32,9 +32,15 @@ class _NotesViewState extends State<NotesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Main UI'),
+        title: const Text('Your Notes'),
         backgroundColor: Color.fromARGB(239, 12, 12, 238),
         actions: [
+          IconButton(
+            onPressed: (){
+              Navigator.of(context).pushNamed(newNotesRoute);
+            }, 
+            icon: const Icon(Icons.add
+            )),
           PopupMenuButton<MenuAction>(
             onSelected: (value) async {
               switch (value){
