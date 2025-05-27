@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:mynotes/services/crud/crud_exceptions.dart';
 import 'package:sqflite/sqflite.dart';
@@ -12,10 +11,16 @@ class NotesService {
   List<DatabaseNote>_notes = [];
   
   static final NotesService _shared = NotesService._sharedInstance();
-  NotesService._sharedInstance();
+  NotesService._sharedInstance(){
+    _notesStreamController = StreamController<List<DatabaseNote>>.broadcast(
+      onListen: (){
+        _notesStreamController.sink.add(_notes);
+      }
+    );
+  }
   factory NotesService() => _shared;
 
-  final _notesStreamController = StreamController<List<DatabaseNote>>.broadcast();
+  late final StreamController<List<DatabaseNote>> _notesStreamController;
   Stream<List<DatabaseNote>> get allNotes => _notesStreamController.stream;
   
   Future<DatabaseUser> getOrCreateUser({required String email}) async{
@@ -250,7 +255,7 @@ const createUserTable = '''CREATE TABLE IF NOT EXISTS "USER" (
                                 );''';
 const createNotesTable = '''CREATE TABLE IF NOT EXISTS "NOTES" (
                                   "ID"	INTEGER NOT NULL,
-                                  "USER_ID"	INTEGER NOT NULL UNIQUE,
+                                  "USER_ID"	INTEGER NOT NULL,
                                   "TEXT"	TEXT,
                                   "IS_SYNCED_WITH_CLOUD"	INTEGER NOT NULL DEFAULT 0,
                                   PRIMARY KEY("ID" AUTOINCREMENT),
