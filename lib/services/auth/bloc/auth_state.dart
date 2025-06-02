@@ -6,7 +6,7 @@ import 'package:mynotes/services/auth/auth_user.dart';
 abstract class AuthState {
   final bool isLoading;
   final String? loadingText;
-  const AuthState({required this.isLoading, this.loadingText = 'Please wait a moment'});
+  const AuthState({required this.isLoading, this.loadingText = 'Please wait a moment !!'});
 }
 
 class AuthStateUninitialized extends AuthState{
@@ -25,7 +25,7 @@ class AuthStateNeedsVerification extends AuthState{
 
 class AuthStateRegistering extends AuthState{
   final Exception? exception;
-  const AuthStateRegistering(Exception e, {required super.isLoading,this.exception});
+  const AuthStateRegistering({required super.isLoading,this.exception});
 }
 
 class AuthStateLoggedOut extends AuthState with EquatableMixin{
@@ -38,4 +38,11 @@ class AuthStateLoggedOut extends AuthState with EquatableMixin{
     
       @override
       List<Object?> get props => [exception,isLoading];
+}
+
+class AuthStateFogotPassword extends AuthState{
+  final Exception ? exception;
+  final bool hasSentEmail;
+
+  const AuthStateFogotPassword({required super.isLoading, required this.exception, required this.hasSentEmail});
 }

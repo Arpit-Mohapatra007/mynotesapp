@@ -5,6 +5,10 @@ import 'package:mynotes/services/auth/bloc/auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc(AuthProvider provider) : super( const AuthStateUninitialized(isLoading: true)){
+    
+    on<AuthEventShouldRegister>((event,emit){
+      emit(const AuthStateRegistering(exception: null, isLoading: false));
+    });
 
     on<AuthEventSendEmailVerification>((event,emit) async{
       await provider.sendEmailVerification();
@@ -50,7 +54,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         await provider.sendEmailVerification();
         emit(const AuthStateNeedsVerification(isLoading: false));
       } on Exception catch(e){
-        emit(AuthStateRegistering(e, isLoading: false));
+        emit(AuthStateRegistering(exception: e, isLoading: false));
       }
     });
 
@@ -62,5 +66,26 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(AuthStateLoggedOut(exception: e, isLoading: false));
       }
     },);
+
+    on <AuthEventForgotPassowrd>((event,emit) async {
+      emit(const AuthStateFogotPassword(isLoading: false, exception: null, hasSentEmail: false));
+      final email = event.email;
+      if (email == null) {
+        return;
+      }
+      emit(const AuthStateFogotPassword(isLoading: true, exception: null, hasSentEmail: false));
+      bool didSendEmail;
+      Exception? exception;
+      try {
+        await provider.sendPasswordReset(toEmail: email);
+        didSendEmail = true;
+        exception = null;
+      } on Exception catch (e) {
+        didSendEmail = false;
+        exception = e;
+      }
+
+       emit(AuthStateFogotPassword(isLoading: false, exception: exception, hasSentEmail: didSendEmail));
+    });
   }
 }
