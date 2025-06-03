@@ -48,32 +48,34 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              const Text('If you have forgot you password enter your email here:'),
-              TextField(
-                keyboardType: TextInputType.emailAddress,
-                autocorrect: false,
-                autofocus: true,
-                controller: _controller,
-                decoration: const InputDecoration(
-                  hintText: 'Your email address...',
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                const Text('If you have forgot you password enter your email here:'),
+                TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  autocorrect: false,
+                  autofocus: true,
+                  controller: _controller,
+                  decoration: const InputDecoration(
+                    hintText: 'Your email address...',
+                  ),
                 ),
-              ),
-              TextButton(
+                TextButton(
+                  onPressed: (){
+                    final email = _controller.text;
+                    context.read<AuthBloc>().add(AuthEventForgotPassowrd(email));
+                  }, 
+                  child: const Text('Send me password reset link'),
+                  ),
+                TextButton(
                 onPressed: (){
-                  final email = _controller.text;
-                  context.read<AuthBloc>().add(AuthEventForgotPassowrd(email));
+                  context.read<AuthBloc>().add(const AuthEventLogOut());
                 }, 
-                child: const Text('Send me password reset link'),
-                ),
-              TextButton(
-              onPressed: (){
-                context.read<AuthBloc>().add(const AuthEventLogOut());
-              }, 
-              child: const Text('Back to Login View'),
-              )
-            ],
+                child: const Text('Back to Login View'),
+                )
+              ],
+            ),
           ),
           ),
     ),
