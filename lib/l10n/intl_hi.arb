@@ -1,0 +1,248 @@
+{
+  "@@locale": "hi",
+
+  "logout_button": "लॉग आउट",
+  "@logout_button": {
+    "description": "लॉग आउट बटन के लिए लेबल",
+    "type": "text"
+  },
+
+  "note": "नोट",
+  "@note": {
+    "description": "एक नोट के लिए शीर्षक",
+    "type": "text"
+  },
+
+  "cancel": "रद्द करें",
+  "@cancel": {
+    "description": "रद्द करने की कार्रवाई के लिए लेबल",
+    "type": "text"
+  },
+
+  "yes": "हाँ",
+  "@yes": {
+    "description": "हाँ के उत्तर के लिए लेबल",
+    "type": "text"
+  },
+
+  "delete": "हटाएं",
+  "@delete": {
+    "description": "हटाने की कार्रवाई के लिए लेबल",
+    "type": "text"
+  },
+
+  "sharing": "साझा करना",
+  "@sharing": {
+    "description": "साझा करने की सुविधा के लिए लेबल",
+    "type": "text"
+  },
+
+  "ok": "ठीक है",
+  "@ok": {
+    "description": "ठीक पुष्टि के लिए लेबल",
+    "type": "text"
+  },
+
+  "login": "लॉग इन",
+  "@login": {
+    "description": "लॉग इन कार्रवाई के लिए लेबल",
+    "type": "text"
+  },
+
+  "verify_email": "ईमेल सत्यापित करें",
+  "@verify_email": {
+    "description": "ईमेल सत्यापन कार्रवाई के लिए लेबल",
+    "type": "text"
+  },
+
+  "register": "रजिस्टर करें",
+  "@register": {
+    "description": "पंजीकरण कार्रवाई के लिए लेबल",
+    "type": "text"
+  },
+
+  "restart": "पुनः आरंभ करें",
+  "@restart": {
+    "description": "पुनः आरंभ करने के लिए लेबल",
+    "type": "text"
+  },
+
+  "start_typing_your_note": "अपना नोट लिखना शुरू करें",
+  "@start_typing_your_note": {
+    "description": "नोट लिखना शुरू करने के लिए प्लेसहोल्डर",
+    "type": "text"
+  },
+
+  "delete_note_prompt": "क्या आप वाकई इस नोट को हटाना चाहते हैं?",
+  "@delete_note_prompt": {
+    "description": "नोट हटाने से पहले पुष्टि संदेश",
+    "type": "text"
+  },
+
+  "cannot_share_empty_note_prompt": "खाली नोट साझा नहीं किया जा सकता!",
+  "@cannot_share_empty_note_prompt": {
+    "description": "जब बिना सामग्री साझा करने का प्रयास किया जाए तो त्रुटि संदेश",
+    "type": "text"
+  },
+
+  "generic_error_prompt": "एक त्रुटि हुई",
+  "@generic_error_prompt": {
+    "description": "सामान्य त्रुटि संदेश",
+    "type": "text"
+  },
+
+  "logout_dialog_prompt": "क्या आप वाकई लॉग आउट करना चाहते हैं?",
+  "@logout_dialog_prompt": {
+    "description": "लॉग आउट करने से पहले पुष्टि संदेश",
+    "type": "text"
+  },
+
+  "password_reset": "पासवर्ड रीसेट",
+  "@password_reset": {
+    "description": "पासवर्ड रीसेट प्रक्रिया के लिए शीर्षक",
+    "type": "text"
+  },
+
+  "password_reset_dialog_prompt": "हमने आपको पासवर्ड रीसेट लिंक भेज दिया है। कृपया अधिक जानकारी के लिए अपना ईमेल जांचें।",
+  "@password_reset_dialog_prompt": {
+    "description": "पासवर्ड रीसेट लिंक भेजने के बाद संदेश",
+    "type": "text"
+  },
+
+  "login_error_cannot_find_user": "दर्ज किए गए प्रमाण-पत्रों के साथ कोई उपयोगकर्ता नहीं मिला!",
+  "@login_error_cannot_find_user": {
+    "description": "लॉग इन के दौरान उपयोगकर्ता न मिलने पर त्रुटि",
+    "type": "text"
+  },
+
+  "login_error_wrong_credentials": "गलत प्रमाण-पत्र",
+  "@login_error_wrong_credentials": {
+    "description": "गलत प्रमाण-पत्र होने पर त्रुटि",
+    "type": "text"
+  },
+
+  "login_error_auth_error": "प्रमाणीकरण त्रुटि",
+  "@login_error_auth_error": {
+    "description": "सामान्य प्रमाणीकरण त्रुटि संदेश",
+    "type": "text"
+  },
+
+  "login_view_prompt": "नोट पर बातचीत करने और बनाने के लिए कृपया अपने खाते में लॉग इन करें!",
+  "@login_view_prompt": {
+    "description": "लॉगिन स्क्रीन पर प्रदर्शित संकेत",
+    "type": "text"
+  },
+
+  "login_view_forgot_password": "मुझे अपना पासवर्ड भूल गया",
+  "@login_view_forgot_password": {
+    "description": "फॉरगॉट पासवर्ड स्क्रीन पर जाने के लिए लेबल",
+    "type": "text"
+  },
+
+  "login_view_not_registered_yet": "अभी तक पंजीकृत नहीं? यहां रजिस्टर करें!",
+  "@login_view_not_registered_yet": {
+    "description": "पंजीकरण स्क्रीन पर जाने के लिए संकेत",
+    "type": "text"
+  },
+
+  "email_text_field_placeholder": "यहां अपना ईमेल दर्ज करें",
+  "@email_text_field_placeholder": {
+    "description": "ईमेल इनपुट के लिए प्लेसहोल्डर",
+    "type": "text"
+  },
+
+  "password_text_field_placeholder": "यहां अपना पासवर्ड दर्ज करें",
+  "@password_text_field_placeholder": {
+    "description": "पासवर्ड इनपुट के लिए प्लेसहोल्डर",
+    "type": "text"
+  },
+
+  "forgot_password": "पासवर्ड भूल गए",
+  "@forgot_password": {
+    "description": "फॉरगॉट पासवर्ड स्क्रीन का शीर्षक",
+    "type": "text"
+  },
+
+  "forgot_password_view_generic_error": "हम आपके अनुरोध को संसाधित नहीं कर पाए। कृपया सुनिश्चित करें कि आप पंजीकृत उपयोगकर्ता हैं, या यदि नहीं, तो एक कदम पीछे जाकर अभी पंजीकरण करें।",
+  "@forgot_password_view_generic_error": {
+    "description": "फॉरगॉट पासवर्ड अनुरोध विफल होने पर त्रुटि",
+    "type": "text"
+  },
+
+  "forgot_password_view_prompt": "यदि आप अपना पासवर्ड भूल गए हैं, तो केवल अपना ईमेल दर्ज करें और हम आपको पासवर्ड रीसेट लिंक भेजेंगे।",
+  "@forgot_password_view_prompt": {
+    "description": "पासवर्ड रीसेट के लिए ईमेल दर्ज करने का संकेत",
+    "type": "text"
+  },
+
+  "forgot_password_view_send_me_link": "मुझे पासवर्ड रीसेट लिंक भेजें",
+  "@forgot_password_view_send_me_link": {
+    "description": "रीसेट लिंक भेजने के लिए बटन लेबल",
+    "type": "text"
+  },
+
+  "forgot_password_view_back_to_login": "लॉगिन पेज पर वापस जाएं",
+  "@forgot_password_view_back_to_login": {
+    "description": "लॉगिन पर वापस जाने के लिए नेविगेशन",
+    "type": "text"
+  },
+
+  "register_error_weak_password": "यह पासवर्ड पर्याप्त सुरक्षित नहीं है। कृपया अन्य पासवर्ड चुनें!",
+  "@register_error_weak_password": {
+    "description": "अपर्याप्त पासवर्ड सुरक्षा पर त्रुटि",
+    "type": "text"
+  },
+
+  "register_error_email_already_in_use": "यह ईमेल पहले से ही किसी अन्य उपयोगकर्ता के साथ पंजीकृत है। कृपया अन्य ईमेल चुनें!",
+  "@register_error_email_already_in_use": {
+    "description": "जब ईमेल पहले से पंजीकृत हो तब त्रुटि",
+    "type": "text"
+  },
+
+  "register_error_generic": "रजिस्टर करने में विफल। कृपया बाद में पुन: प्रयास करें!",
+  "@register_error_generic": {
+    "description": "सामान्य पंजीकरण त्रुटि संदेश",
+    "type": "text"
+  },
+
+  "register_error_invalid_email": "आपका दर्ज किया गया ईमेल पता अमान्य प्रतीत होता है। कृपया अन्य ईमेल पता दर्ज करें!",
+  "@register_error_invalid_email": {
+    "description": "अमान्य ईमेल फॉर्मेट पर त्रुटि",
+    "type": "text"
+  },
+
+  "register_view_prompt": "अपने नोट देखने के लिए अपना ईमेल और पासवर्ड दर्ज करें!",
+  "@register_view_prompt": {
+    "description": "पंजीकरण स्क्रीन पर संकेत",
+    "type": "text"
+  },
+
+  "register_view_already_registered": "पहले से पंजीकृत हैं? यहाँ लॉगिन करें!",
+  "@register_view_already_registered": {
+    "description": "पहले से पंजीकृत होने पर लॉगिन के लिए संकेत",
+    "type": "text"
+  },
+
+  "verify_email_view_prompt": "हमने आपको ईमेल सत्यापन भेजा है। कृपया अपना खाता सत्यापित करने के लिए इसे खोलें। यदि आपको सत्यापन ईमेल नहीं मिला है, तो नीचे दिए गए बटन पर क्लिक करें!",
+  "@verify_email_view_prompt": {
+    "description": "ईमेल सत्यापन स्क्रीन पर संकेत",
+    "type": "text"
+  },
+
+  "verify_email_send_email_verification": "ईमेल सत्यापन भेजें",
+  "@verify_email_send_email_verification": {
+    "description": "सत्यापन ईमेल पुनः भेजने के लिए बटन लेबल",
+    "type": "text"
+  },
+
+  "notes_title": "{count, plural, =0{कोई नोट नहीं} =1{1 नोट} other{{count} नोट}}",
+  "@notes_title": {
+    "description": "नोट्स की संख्या दिखाने वाला शीर्षक",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3 नोट"
+      }
+    }
+  }
+}
