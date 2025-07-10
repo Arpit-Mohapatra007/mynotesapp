@@ -24,7 +24,7 @@ void main() {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 255, 4, 0),
+          seedColor: const Color.fromARGB(255, 0, 255, 251),
         ),
       ),
       home: BlocProvider<AuthBloc>(
