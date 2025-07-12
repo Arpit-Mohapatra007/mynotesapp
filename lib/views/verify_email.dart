@@ -37,8 +37,12 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                       ),
                     ],
                   ),
-      child: IntrinsicHeight(
+      child:  SingleChildScrollView(
+        padding: EdgeInsets.only(
+          bottom: MediaQuery.of(context).viewInsets.bottom, // adjusts with keyboard
+                  ),
         child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Icon(
                 Icons.mail_rounded,

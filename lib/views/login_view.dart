@@ -76,8 +76,12 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ],
                   ),
-                  child: IntrinsicHeight(
+                  child:  SingleChildScrollView(
+                          padding: EdgeInsets.only(
+                            bottom: MediaQuery.of(context).viewInsets.bottom, // adjusts with keyboard
+                          ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         Image.asset('assets/icon/icon.png',
                         width: 100,
@@ -85,6 +89,7 @@ class _LoginViewState extends State<LoginView> {
                         ),
                         const SizedBox(height: 20),
                         Text(context.loc.login,
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,

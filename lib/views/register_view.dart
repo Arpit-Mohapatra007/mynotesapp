@@ -71,9 +71,12 @@ class _RegisterViewState extends State<RegisterView> {
                       ),
                     ],
                   ),
-                  child: IntrinsicHeight(
+                  child:  SingleChildScrollView(
+                      padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).viewInsets.bottom, // adjusts with keyboard
+                      ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Icon(
                     Icons.priority_high,
@@ -82,6 +85,7 @@ class _RegisterViewState extends State<RegisterView> {
                     ),
                     const SizedBox(height: 20),
                     Text(context.loc.register,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,

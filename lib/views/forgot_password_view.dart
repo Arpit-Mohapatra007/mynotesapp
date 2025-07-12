@@ -68,8 +68,12 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                   ),
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: IntrinsicHeight(
+          child:  SingleChildScrollView(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).viewInsets.bottom, // adjusts with keyboard
+              ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Icon(
                   Icons.lock_reset,
