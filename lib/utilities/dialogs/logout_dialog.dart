@@ -11,7 +11,8 @@ Future<bool> showLogOutDialog(BuildContext context) {
     
     // Logout-themed decorations
     titleIcon: Icons.logout_outlined,
-    titleIconColor: Theme.of(context).colorScheme.secondary,
+    titleColor: Colors.red,
+    titleIconColor: Colors.red,
     contentIcon: Icons.exit_to_app_outlined,
     
     // Enhanced styling

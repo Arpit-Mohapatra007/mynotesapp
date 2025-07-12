@@ -9,6 +9,7 @@ Future<T?> showGenericDialog<T>({
   required DialogOptionBuilder optionsBuilder,
   // New decorative parameters
   IconData? titleIcon,
+  Color? titleColor,
   Color? titleIconColor,
   IconData? contentIcon,
   Color? backgroundColor,
@@ -44,6 +45,7 @@ Future<T?> showGenericDialog<T>({
                       title,
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
+                        color: titleColor ?? Theme.of(context).colorScheme.primary,
                       ),
                     ),
                   ),
