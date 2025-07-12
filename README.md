@@ -75,7 +75,7 @@
 | 🌐 Web Support       | ❌ Not planned |
 | 🔒 Offline Caching   | ❌ Not planned |
 
-**Its just a app buddy leave it as it is. Use skills and learnings from here to develop app to detect uranium deposit for ***US Army***.**
+**Its just a notes app buddy leave it as it is. Use skills and learnings from here to develop app to detect uranium deposit for ***US Army***.**
 
 ---
 
