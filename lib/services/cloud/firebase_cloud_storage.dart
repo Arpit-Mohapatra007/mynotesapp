@@ -16,7 +16,10 @@ class FirebaseCloudStorage {
 
   Future<void> updateNote({required String documentId, required String text}) async {
     try{
-      await notes.doc(documentId).update({textFieldName: text});
+      await notes.doc(documentId).update({
+        textFieldName: text,
+        updatedAtFieldName: FieldValue.serverTimestamp(),
+      });
     } catch(e){
       throw CouldNotUpdateNoteException();
     }
@@ -27,15 +30,20 @@ class FirebaseCloudStorage {
       .map((doc)=> CloudNote.fromSnapshot(doc)));
 
   Future<CloudNote> createNewNote({required String ownerUserId}) async {
-    final document = await notes.add({
-      ownerUserIdFieldName: ownerUserId,
-      textFieldName: '',
-    });
-    final fetchedNote = await document.get();
-    return CloudNote(documentId: fetchedNote.id,
-     ownerUserId: ownerUserId, 
-     text: ''
-     );
+    try {
+      final document = await notes.add({
+        ownerUserIdFieldName: ownerUserId,
+        textFieldName: '',
+        createdAtFieldName: FieldValue.serverTimestamp(),
+        updatedAtFieldName: FieldValue.serverTimestamp(),
+      });
+      
+      // Fetch the document again to get the actual server timestamps
+      final fetchedNote = await document.get();
+      return CloudNote.fromSnapshot(fetchedNote as QueryDocumentSnapshot<Map<String, dynamic>>);
+    } catch (e) {
+      throw CouldNotCreateNoteException();
+    }
   }
 
   static final FirebaseCloudStorage _shared= 

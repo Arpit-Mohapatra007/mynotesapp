@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mynotes/extensions/buildcontext/loc.dart';
 import 'package:mynotes/utilities/dialogs/generic_dialog.dart';
 
-// Enhanced Delete Dialog
-Future<bool> showDeleteDialog(BuildContext context) {
-  return showGenericDialog<bool>(
+// Enhanced Delete Dialog - Make sure this is at the top of notes_view.dart
+Future<bool> showDeleteDialog(BuildContext context) async {
+  return await showGenericDialog<bool>(
     context: context,
     title: context.loc.delete,
     content: context.loc.delete_note_prompt,
@@ -29,5 +29,5 @@ Future<bool> showDeleteDialog(BuildContext context) {
       context.loc.cancel: false,
       context.loc.ok: true,
     },
-  ).then((value) => value ?? false);
+  ) ?? false; // Remove .then() since we're using await
 }
