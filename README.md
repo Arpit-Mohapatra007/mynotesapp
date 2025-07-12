@@ -2,7 +2,7 @@
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.13.0-blue)](https://flutter.dev/) [![Firebase](https://img.shields.io/badge/Firebase-9.6.1-ffca28)](https://firebase.google.com/) [![Bloc](https://img.shields.io/badge/State%20Management-BLoC-ef5350)](https://bloclibrary.dev/) [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-> A sleek little notes app built with **Flutter**, **Dart**, and **Firebase**, powered by **BLoC** and spiced up with animations.
+> A sleek little notes app built with **Flutter**, **Dart**, and **Firebase**, powered by **BLoC** and spiced up with animations created through the combined efforts of Youtube Tutorial, My mentor and coding tutor Claude and a bit of my peanut sized brain.
 
 ---
 
