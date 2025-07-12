@@ -332,11 +332,65 @@ abstract class AppLocalizations {
   /// **'Send email verification'**
   String get verify_email_send_email_verification;
 
-  /// Title showing number of notes
+  /// Title when there are no notes
   ///
   /// In en, this message translates to:
-  /// **'{count, plural, =0{No notes yet} =1{1 note} other{{count} notes}}'**
-  String notes_title(int count);
+  /// **'No notes yet'**
+  String get no_notes_title;
+
+  /// Instruction when there are no notes
+  ///
+  /// In en, this message translates to:
+  /// **'Tap the + button to create your first note'**
+  String get tap_to_add;
+
+  /// Title for empty note
+  ///
+  /// In en, this message translates to:
+  /// **'Empty note'**
+  String get empty_note_title;
+
+  /// Label for character count
+  ///
+  /// In en, this message translates to:
+  /// **'characters'**
+  String get characters;
+
+  /// Label for time elapsed
+  ///
+  /// In en, this message translates to:
+  /// **'ago'**
+  String get ago;
+
+  /// Label for current time
+  ///
+  /// In en, this message translates to:
+  /// **'now'**
+  String get now;
+
+  /// Label for new note button
+  ///
+  /// In en, this message translates to:
+  /// **'New Note'**
+  String get new_note_button;
+
+  /// Title for my notes section
+  ///
+  /// In en, this message translates to:
+  /// **'My Notes'**
+  String get my_notes;
+
+  /// Label for note title
+  ///
+  /// In en, this message translates to:
+  /// **'note'**
+  String get note_title;
+
+  /// Title for notes section
+  ///
+  /// In en, this message translates to:
+  /// **'notes'**
+  String get notes_title;
 }
 
 class _AppLocalizationsDelegate

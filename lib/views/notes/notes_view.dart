@@ -115,16 +115,16 @@ class _NotesViewState extends State<NotesView> with TickerProviderStateMixin {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'My Notes',
-                      style: TextStyle(
+                    Text(
+                      context.loc.my_notes,
+                      style: const TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
                         color: Colors.black87,
                       ),
                     ),
                     Text(
-                      '$noteCount ${noteCount == 1 ? 'note' : 'notes'}',
+                      '$noteCount ${noteCount == 1 ? context.loc.note : context.loc.notes_title}',
                       style: const TextStyle(
                         fontSize: 16,
                         color: Colors.grey,
@@ -255,9 +255,9 @@ class _NotesViewState extends State<NotesView> with TickerProviderStateMixin {
                 },
                 backgroundColor: const Color(0xFF6C63FF),
                 icon: const Icon(Icons.add, color: Colors.white),
-                label: const Text(
-                  'New Note',
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+                label: Text(
+                  context.loc.new_note_button,
+                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
                 ),
                 elevation: 8,
                 extendedPadding: const EdgeInsets.symmetric(horizontal: 20),
@@ -316,7 +316,7 @@ class _NotesViewState extends State<NotesView> with TickerProviderStateMixin {
               child: Column(
                 children: [
                   Text(
-                    'No notes yet',
+                    context.loc.no_notes_title,
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w600,
@@ -325,7 +325,7 @@ class _NotesViewState extends State<NotesView> with TickerProviderStateMixin {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'Tap the + button to create your first note',
+                    context.loc.tap_to_add,
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey[500],
@@ -563,7 +563,7 @@ class _FloatingNoteCardState extends State<FloatingNoteCard>
                                           ),
                                           child: const Icon(
                                             Icons.delete_outline,
-                                            size: 20,
+                                            size: 35,
                                             color: Colors.red,
                                           ),
                                         ),
@@ -574,7 +574,7 @@ class _FloatingNoteCardState extends State<FloatingNoteCard>
                                   Expanded(
                                     child: Text(
                                       widget.note.text.isEmpty
-                                          ? 'Empty note'
+                                          ? context.loc.empty_note_title
                                           : widget.note.text,
                                       style: TextStyle(
                                         fontSize: 14,
@@ -598,7 +598,7 @@ class _FloatingNoteCardState extends State<FloatingNoteCard>
                                       ),
                                       const SizedBox(width: 4),
                                       Text(
-                                        '${widget.note.text.length} characters',
+                                        '${widget.note.text.length} ${context.loc.characters}}',
                                         style: TextStyle(
                                           fontSize: 11,
                                           color: Colors.grey[600],
@@ -665,13 +665,13 @@ class _FloatingNoteCardState extends State<FloatingNoteCard>
     if (difference.inDays > 30) {
       return '${dateTime.day}/${dateTime.month}';
     } else if (difference.inDays > 0) {
-      return '${difference.inDays}d ago';
+      return '${difference.inDays}d ${context.loc.ago}';
     } else if (difference.inHours > 0) {
-      return '${difference.inHours}h ago';
+      return '${difference.inHours}h ${context.loc.ago}';
     } else if (difference.inMinutes > 0) {
-      return '${difference.inMinutes}m ago';
+      return '${difference.inMinutes}m ${context.loc.ago}';
     } else {
-      return 'now';
+      return context.loc.now;
     }
   }
 }

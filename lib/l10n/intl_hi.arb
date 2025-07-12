@@ -235,14 +235,63 @@
     "type": "text"
   },
 
-  "notes_title": "{count, plural, =0{कोई नोट नहीं} =1{1 नोट} other{{count} नोट}}",
-  "@notes_title": {
-    "description": "नोट्स की संख्या दिखाने वाला शीर्षक",
-    "placeholders": {
-      "count": {
-        "type": "int",
-        "example": "3 नोट"
-      }
-    }
+  "no_notes_title": "अभी तक कोई नोट नहीं",
+"@no_notes_title": {
+  "description": "जब कोई नोट नहीं हो तो शीर्षक",
+  "type": "text"
+},
+
+"tap_to_add": "अपना पहला नोट बनाने के लिए + बटन दबाएं",
+"@tap_to_add": {
+  "description": "जब कोई नोट नहीं हो तो निर्देश",
+  "type": "text"
+},
+
+"empty_note_title": "खाली नोट",
+"@empty_note_title": {
+  "description": "खाली नोट का शीर्षक",
+  "type": "text"
+},
+
+"characters": "अक्षर",
+"@characters": {
+  "description": "अक्षर गणना के लिए लेबल",
+  "type": "text"
+},
+
+"ago": "पहले",
+"@ago": {
+  "description": "समय बीतने का लेबल",
+  "type": "text"
+},
+
+"now": "अभी",
+"@now": {
+  "description": "वर्तमान समय के लिए लेबल",
+  "type": "text"
+},
+
+"new_note_button": "नया नोट",
+"@new_note_button": {
+  "description": "नया नोट बटन के लिए लेबल",
+  "type": "text"
+},
+
+"my_notes": "मेरे नोट्स",
+"@my_notes": {
+  "description": "मेरे नोट्स अनुभाग के लिए शीर्षक",
+  "type": "text"
+},
+
+"note_title": "नोट",
+"@note_title": {
+  "description": "नोट शीर्षक के लिए लेबल",
+  "type": "text"
+},
+
+"notes_title": "नोट्स",
+"@notes_title": {
+  "description": "नोट्स अनुभाग का शीर्षक",
+  "type": "text"
   }
 }

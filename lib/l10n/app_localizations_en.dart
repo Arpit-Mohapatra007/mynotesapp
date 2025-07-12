@@ -139,14 +139,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get verify_email_send_email_verification => 'Send email verification';
 
   @override
-  String notes_title(int count) {
-    String _temp0 = intl.Intl.pluralLogic(
-      count,
-      locale: localeName,
-      other: '$count notes',
-      one: '1 note',
-      zero: 'No notes yet',
-    );
-    return '$_temp0';
-  }
+  String get no_notes_title => 'No notes yet';
+
+  @override
+  String get tap_to_add => 'Tap the + button to create your first note';
+
+  @override
+  String get empty_note_title => 'Empty note';
+
+  @override
+  String get characters => 'characters';
+
+  @override
+  String get ago => 'ago';
+
+  @override
+  String get now => 'now';
+
+  @override
+  String get new_note_button => 'New Note';
+
+  @override
+  String get my_notes => 'My Notes';
+
+  @override
+  String get note_title => 'note';
+
+  @override
+  String get notes_title => 'notes';
 }

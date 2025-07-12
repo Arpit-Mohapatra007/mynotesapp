@@ -235,14 +235,63 @@
     "type": "text"
   },
 
-  "notes_title": "{count, plural, =0{No notes yet} =1{1 note} other{{count} notes}}",
+  "no_notes_title": "No notes yet",
+  "@no_notes_title": {
+    "description": "Title when there are no notes",
+    "type": "text"
+  },
+
+  "tap_to_add": "Tap the + button to create your first note",
+  "@tap_to_add": {
+    "description": "Instruction when there are no notes",
+    "type": "text"
+  },
+
+  "empty_note_title": "Empty note",
+  "@empty_note_title": {
+    "description": "Title for empty note",
+    "type": "text"
+  },
+
+  "characters": "characters",
+  "@characters": {
+    "description": "Label for character count",
+    "type": "text"
+  },
+
+  "ago": "ago",
+  "@ago": {
+    "description": "Label for time elapsed",
+    "type": "text"
+  },
+
+  "now": "now",
+  "@now": {
+    "description": "Label for current time",
+    "type": "text"
+  },
+  
+  "new_note_button": "New Note",
+  "@new_note_button": {
+    "description": "Label for new note button",
+    "type": "text"
+  },
+
+  "my_notes": "My Notes",
+  "@my_notes": {
+    "description": "Title for my notes section",
+    "type": "text"
+  },
+
+  "note_title": "note",
+  "@note_title": {
+    "description": "Label for note title",
+    "type": "text"
+  },
+
+  "notes_title": "notes",
   "@notes_title": {
-    "description": "Title showing number of notes",
-    "placeholders": {
-      "count": {
-        "type": "int",
-        "example": "3 notes"
-      }
-    }
+    "description": "Title for notes section",
+    "type": "text"
   }
 }
